@@ -28,4 +28,15 @@ W każdej podfolderze (`lab12_docker`, `lab13_docker`, `lab14_docker`) znajduje 
 
 ---
 
-🔐 Foldery `secrets/` są ignorowane w repozytorium.
+Bezpieczeństwo
+
+Foldery `secrets/` w lab13 i lab14 są **wykluczone z repozytorium** (`.gitignore`), dzięki czemu dane uwierzytelniające nie są publikowane.
+
+---
+
+Komentarz techniczny
+
+Repozytorium pokazuje ewolucję projektu Docker:
+- Od prostej konfiguracji (Lab 12)
+- Przez poprawę bezpieczeństwa (Lab 13)
+- Do dobrej praktyki modularnej (Lab 14)
