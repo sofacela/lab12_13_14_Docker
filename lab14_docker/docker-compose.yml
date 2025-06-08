@@ -1,0 +1,36 @@
+services:
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    depends_on:
+      - php
+    networks:
+      - frontend
+      - backend
+
+  php:
+    image: php:8.2-fpm
+    container_name: php
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    networks:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    depends_on:
+      - mysql
+    networks:
+      - backend
+      - frontend
+
+networks:
+  backend:
+  frontend:
